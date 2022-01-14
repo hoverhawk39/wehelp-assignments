@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+    <title>Week3 作業</title>
+    <link href="style_w3-2.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript">
+        function init(){
+            let req=new XMLHttpRequest();
+            req.open("get", "https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json");
+            req.onload=function(){
+                let output=this.responseText;
+                let ans=JSON.parse(output);
+                let num=ans.result.results.length;
+                let spot_text=[];
+                let spot_img=[];
+                for(let i=0;i<num;i++){
+                    spot_text.push(ans.result.results[i].stitle);
+                    let url=ans.result.results[i].file.split("https")[1]
+                    spot_img.push("https"+url)
+                }
+                // console.log(spot_img);
+                for(let j=1;j<=8;j++){
+                    let title=document.getElementById("title-"+j);
+                    let oldnode=document.querySelectorAll("span")[j-1];
+                    let newnode=document.createElement("span");
+                    let text=document.createTextNode(spot_text[j-1]);
+                    newnode.appendChild(text);
+                    title.appendChild(newnode);
+                    title.removeChild(oldnode);
+                }
+                for(let k=1;k<=8;k++){
+                    // let old_url=document.images.namedItem("img-"+k).src; 
+                    // console.log(old_url);
+                    let new_url=spot_img[k-1];
+                    document.getElementById("img-"+k).src=new_url;
+                    let image=document.getElementById("img-"+k);
+                    image.style.aspectRatio=4/3;
+                }
+            }
+            req.send();
+        }
+    </script>
+</head>
+<body onload="init();">
+    <nav>
+        <div class="site">My Websites</div>
+        <img src="https://cdn1.iconfinder.com/data/icons/feather-2/24/menu-512.png"></img>
+        <div class="one">Item 1</div>
+        <div class="two">Item 2</div>
+        <div class="three">Item 3</div>
+        <div class="four">Item 4</div>
+    </nav>
+    <div class="home">
+        <div id="word">
+            Welcome to MyHome
+        </div>
+    </div>
+    <main>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-1"></img>
+            <div id="title-1"><span>Title 1</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-2"></img>
+            <div id="title-2"><span>Title 2</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-3"></img>
+            <div id="title-3"><span>Title 3</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-4"></img>
+            <div id="title-4"><span>Title 4</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-5"></img>
+            <div id="title-5"><span>Title 5</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-6"></img>
+            <div id="title-6"><span>Title 6</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-7"></img>
+            <div id="title-7"><span>Title 7</span></div>
+        </div>
+        <div class="box">
+            <img src="https://i.imgur.com/uWyPyjp.jpeg" class="img" id="img-8"></img>
+            <div id="title-8"><span>Title 8</span></div>
+        </div>
+
+    </main>
+</body>
+</html>
