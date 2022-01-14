@@ -20,7 +20,6 @@
                     let url=ans.result.results[i].file.split("https")[1]
                     spot_img.push("https"+url)
                 }
-                // console.log(spot_img);
                 for(let j=1;j<=8;j++){
                     let title=document.getElementById("title-"+j);
                     let oldnode=document.querySelectorAll("span")[j-1];
@@ -31,8 +30,6 @@
                     title.removeChild(oldnode);
                 }
                 for(let k=1;k<=8;k++){
-                    // let old_url=document.images.namedItem("img-"+k).src; 
-                    // console.log(old_url);
                     let new_url=spot_img[k-1];
                     document.getElementById("img-"+k).src=new_url;
                     let image=document.getElementById("img-"+k);
