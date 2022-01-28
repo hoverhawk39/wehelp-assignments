@@ -18,41 +18,41 @@
 
 
 【3】
->SELECT *
->FROM member
+>SELECT * <br/>
+>FROM member <br/>
 >ORDER BY time DESC;
 
 ![](https://i.imgur.com/r05mXZJ.png)
 
 
 【4】
->SELECT *
->FROM member
->ORDER BY time DESC
+>SELECT * <br/>
+>FROM member <br/>
+>ORDER BY time DESC <br/>
 >LIMIT 1,3;
 
 ![](https://i.imgur.com/zJQrYFf.png)
 
 
 【5】
->SELECT *
->FROM member
+>SELECT * <br/>
+>FROM member <br/>
 >WHERE username="test";
 
 ![](https://i.imgur.com/O5EUhtw.png)
 
 
 【6】
->SELECT *
->FROM member
+>SELECT * <br/>
+>FROM member <br/>
 >WHERE username="test" and password="test";
 
 ![](https://i.imgur.com/OibkmHz.png)
 
 
 【7】
->UPDATE member
->SET name = "test2"
+>UPDATE member <br/>
+>SET name = "test2" <br/>
 >WHERE username = "test";
 
 ![](https://i.imgur.com/o7VNVoy.png)
@@ -60,21 +60,21 @@
 
 ### 作業四
 【1】
->SELECT COUNT(*) AS total_data
+>SELECT COUNT(*) AS total_data <br/>
 >FROM member;
 
 ![](https://i.imgur.com/ox53X5a.png)
 
 
 【2】
->SELECT SUM(follower_count) AS sum_of_follower
+>SELECT SUM(follower_count) AS sum_of_follower <br/>
 >FROM member;
 
 ![](https://i.imgur.com/r4n5Zp3.png)
 
 
 【3】
->SELECT AVG(follower_count) AS avg_of_follower
+>SELECT AVG(follower_count) AS avg_of_follower <br/>
 >FROM member;
 
 ![](https://i.imgur.com/ATzYhpw.png)
