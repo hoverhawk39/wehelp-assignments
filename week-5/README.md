@@ -81,13 +81,13 @@
 
 
 ### 作業五
->USE website;
->CREATE TABLE message(id BIGINT AUTO_INCREMENT,
->	member_id BIGINT NOT NULL,
->	content VARCHAR(255) NOT NULL,
->    time DATETIME NOT NULL default current_timestamp,
->    PRIMARY KEY (id),
->    FOREIGN KEY (member_id) REFERENCES member(id)
+>USE website; <br/>
+>CREATE TABLE message(id BIGINT AUTO_INCREMENT, <br/>
+>	member_id BIGINT NOT NULL, <br/>
+>	content VARCHAR(255) NOT NULL, <br/>
+>    time DATETIME NOT NULL default current_timestamp, <br/>
+>    PRIMARY KEY (id), <br/>
+>    FOREIGN KEY (member_id) REFERENCES member(id) <br/>
 >)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 建立完 message 資料表，用 desc 查看表格概況～
@@ -100,17 +100,17 @@
 
 
 【1】
->SELECT content,name
->FROM website.message mes LEFT JOIN website.member mem
+>SELECT content,name <br/>
+>FROM website.message mes LEFT JOIN website.member mem <br/>
 >ON mes.member_id=mem.id;
 
 ![](https://i.imgur.com/cnFLBNw.png)
 
 
 【2】
->SELECT username,content,name
->FROM website.message mes LEFT JOIN website.member mem
->ON mes.member_id=mem.id
+>SELECT username,content,name <br/>
+>FROM website.message mes LEFT JOIN website.member mem <br/>
+>ON mes.member_id=mem.id <br/>
 >HAVING mem.username="test";
 
 ![](https://i.imgur.com/FNOS9o8.png)
