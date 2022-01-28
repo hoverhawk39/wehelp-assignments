@@ -1,11 +1,10 @@
 ### 作業三
 【1】
->insert into member(name,username,password,follower_count) values("Sam","test","test",100);
-
->insert into member(name,username,password,follower_count) values("Jay","test2","test2",200);
->insert into member(name,username,password,follower_count) values("Mark","test3","test3",300);<br/>
->insert into member(name,username,password,follower_count) values("Winnie","test4","test4",400);
->insert into member(name,username,password,follower_count) values("Peter","test5","test5",500);
+>insert into member(name,username,password,follower_count) values("Sam","test","test",100); <br/>
+>insert into member(name,username,password,follower_count) values("Jay","test2","test2",200); <br/>
+>insert into member(name,username,password,follower_count) values("Mark","test3","test3",300); <br/>
+>insert into member(name,username,password,follower_count) values("Winnie","test4","test4",400); <br/>
+>insert into member(name,username,password,follower_count) values("Peter","test5","test5",500); <br/>
 >insert into member(name,username,password,follower_count) values("Vanson","test6","test6",600);
 
 ![](https://i.imgur.com/Rn7P7oY.png)
