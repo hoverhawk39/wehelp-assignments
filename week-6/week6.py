@@ -41,17 +41,11 @@ def signin():
     act=request.form['account']
     pwd=request.form['password']
     c=db.cursor()
-    sql='SELECT username,password FROM member WHERE username=%s AND password=%s'
+    sql='SELECT name,username,password FROM member WHERE username=%s AND password=%s'
     c.execute(sql,(act,pwd))
     output=c.fetchall()
     # print(output)
     if(len(output)==1):
-        act=(request.form['account'],)
-        c=db.cursor()
-        sql='SELECT name FROM member WHERE username=%s'
-        c.execute(sql,act)
-        output=c.fetchall()
-        # print(output)
         session['status']=output[0][0]
         return redirect('/member/')
     else:
