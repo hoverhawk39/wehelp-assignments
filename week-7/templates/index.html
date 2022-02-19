@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+    <title>首頁</title>
+    <link href="/static/layout.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body style="margin: 0px">
+    <div class="block1">
+        <span>歡迎光臨，請註冊登入系統</span>
+    </div>
+    <div class="block2">
+        <span style="font-weight: bold;">註冊帳號</span>
+    </div>
+    <div class="block3">
+        <form action="/signup" method="POST">
+            姓名 <input type="text" id="blank" name="name"/><br>
+            帳號 <input type="text" id="blank" name="username"/><br>
+            密碼 <input type="text" id="blank" name="password"/><br>
+            <button id="btn">註冊</button>
+        </form>
+    </div>
+    <hr style="margin: 30px 0px;">
+    <div class="block2">
+        <span style="font-weight: bold;">登入系統</span>
+    </div>
+    <div class="block3">
+        <form action="/signin" method="POST">
+            帳號 <input type="text" id="blank" name="account"/><br>
+            密碼 <input type="text" id="blank" name="password"/><br>
+            <button id="btn">登入</button>
+        </form>
+    </div>
+</body>
+</html>
